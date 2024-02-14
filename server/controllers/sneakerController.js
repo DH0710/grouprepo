@@ -1,9 +1,13 @@
-const asyncHandler = require("express-async-handler")
+const asyncHandler = require("express-async-handler");
 
 
-const currentSneaker = asyncHandler(async (req, res) => {
-    res.json({ message: "Current sneaker information"})
+const currentSneakers = asyncHandler(async (req, res) => {
+    res.status(200).json({ message: "Current sneakers information"})
+});
+
+const createSneaker = asyncHandler(async (req, res) => {
+    res.status(200).json({ message: "Sneaker created!"})
 });
 
 
-module.exports = {currentSneaker}
+module.exports = {currentSneakers, createSneaker}

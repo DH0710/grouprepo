@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const {currentSneaker} = require("../controllers/sneakerController");
+const {currentSneakers, createSneaker} = require("../controllers/sneakerController");
 
-router.get("/current", currentSneaker);
+router.route("/").get(currentSneakers).post(createSneaker);
+
 
 
 
