@@ -4,6 +4,8 @@ const {currentSneakers, createSneaker} = require("../controllers/sneakerControll
 
 router.route("/").get(currentSneakers).post(createSneaker);
 
+router.route("/:id").put(deleteSneaker)
+
 
 
 

@@ -6,8 +6,10 @@ const currentSneakers = asyncHandler(async (req, res) => {
 });
 
 const createSneaker = asyncHandler(async (req, res) => {
-    res.status(200).json({ message: "Sneaker created!"})
+    res.status(201).json({ message: "Sneaker created!"})
 });
+
+
 
 
 module.exports = {currentSneakers, createSneaker}
