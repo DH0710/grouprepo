@@ -1,10 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const {currentSneakers, createSneaker} = require("../controllers/sneakerController");
+const {currentSneakers, createSneaker, deleteSneaker} = require("../controllers/sneakerController");
 
-router.route("/").get(currentSneakers).post(createSneaker);
+router.route("/").get(currentSneakers)
 
-router.route("/:id").put(deleteSneaker)
+router.route("/create").post(createSneaker)
+
+router.route("/:id").delete(deleteSneaker)
 
 
 
