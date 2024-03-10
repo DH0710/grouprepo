@@ -9,11 +9,35 @@ const currentSneakers = asyncHandler(async (req, res) => {
 
 
 
-const createSneaker = asyncHandler(async (req, res) => {
+const singleSneaker = asyncHandler(async (req, res) => {
+
+    const singleItem = await Sneaker.findById(req.params.id);
+    if (!singleItem) {
+        res.status(404);
+        throw new Error("Sneaker not found")
+    }
+    res.status(200).json(singleItem);
+
+});
+
+
+
+
+
+
+
+// Multer is a node. js middleware for handling multipart/form-data. 
+// Usually for uploading a file/data.
+
+
+
+
+
+const createSneaker = asyncHandler( async (req, res) => {
     console.log("The request body is: ", req.body);
 
-    const {brand, name, size, price, color} = req.body;
-    if (!brand || !name || !size || !price || !color ) {
+    const {brand, name, size, image, price, color, instock} = req.body;
+    if (!brand || !name || !size || !image || !price || !color || !instock ) {
         res.status(400);
         throw new Error("All fields are mandatory!")
     }
@@ -21,15 +45,24 @@ const createSneaker = asyncHandler(async (req, res) => {
         brand,
         name,
         size,
+        image,
         price,
         color,
+        instock
     });
 
     res.status(201).json(sneakers)
+   
 });
 
 
-const updateSneaker = asyncHandler( async (req, res) => {
+
+
+
+
+
+
+const updateSneaker = asyncHandler(async (req, res) => {
     const sneakers = await Sneaker.findById(req.params.id);
     if (!sneakers) {
         res.status(404);
@@ -39,18 +72,18 @@ const updateSneaker = asyncHandler( async (req, res) => {
 
         req.params.id,
         req.body,
-        {new: true}
+        { new: true }
     );
 
-    res.status(200).json (updatedSneaker);
+    res.status(200).json(updatedSneaker);
 });
 
 
 const deleteSneaker = asyncHandler(async (req, res) => {
-    res.status(201).json({ message: "Sneaker deleted!"})
+    res.status(201).json({ message: "Sneaker deleted!" })
 });
 
 
 
 
-module.exports = {currentSneakers, createSneaker, updateSneaker, deleteSneaker}
+module.exports = { currentSneakers, createSneaker, updateSneaker, deleteSneaker, singleSneaker }

@@ -10,9 +10,19 @@ const sneakerSchema = mongoose.Schema ({
         required: [true, "Please add the name of the sneaker"]
 
     },
+    image: {
+        type: String,
+        required: [true, "Please add the image of the sneaker"]
+
+    },
     size: {
         type: Number,
         required: [true, "Please add sneaker size"]
+    },
+    instock: {
+        type: Number,
+        required: [true, "Please show how many of the sneaker is in stock"]
+
     },
     price: {
         type: Number,
