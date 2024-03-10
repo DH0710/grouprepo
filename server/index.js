@@ -38,6 +38,11 @@ app.use(express.json());
 app.use('/api/sneakers', require ("./routes/sneakerRoutes"));
 
 
+
+
+
+// logic for uploading images for sneakers once theyre created. 
+
 app.get("/upload", (req, res) => {
   res.sender("upload")
 });
