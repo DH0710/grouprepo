@@ -1,8 +1,9 @@
 const express = require('express');
-const connectDB = require("./config/dbConnection")
+const connectDB = require("./config/dbConnection");
+const errorHandler = require("./middleware/errorHandler");
 const dotenv = require("dotenv").config();
-const multer = require("multer")
-const path = require("path")
+const multer = require("multer");
+const path = require("path");
 
 
 const storage = multer.diskStorage({
@@ -13,13 +14,14 @@ const storage = multer.diskStorage({
   filename: (req, file, cb) => {
     console.log(file)
 
-    cb(null, Dtae.now() + path.extname(file.originalname) )
+    cb(null, Date.now() + path.extname(file.originalname) )
   }
   
 });
 
 
-
+// Multer is a node.js middleware for handling multipart/form-data. 
+// Usually for uploading a file/data.
 
 
 const upload = multer ({storage: storage})
@@ -36,6 +38,8 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.json());
 app.use('/api/sneakers', require ("./routes/sneakerRoutes"));
+app.use('/api/users', require ("./routes/userRoutes"));
+app.use(errorHandler);
 
 
 

@@ -22,17 +22,6 @@ const singleSneaker = asyncHandler(async (req, res) => {
 
 
 
-
-
-
-
-// Multer is a node. js middleware for handling multipart/form-data. 
-// Usually for uploading a file/data.
-
-
-
-
-
 const createSneaker = asyncHandler( async (req, res) => {
     console.log("The request body is: ", req.body);
 
