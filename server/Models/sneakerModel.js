@@ -1,6 +1,13 @@
 const mongoose = require("mongoose");
 
 const sneakerSchema = mongoose.Schema ({
+
+    user_id: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+        ref: "User",
+
+    },
     brand: {
         type: String,
         required: [true, "Please add brand of sneaker"]
@@ -11,12 +18,12 @@ const sneakerSchema = mongoose.Schema ({
 
     },
     image: {
-        type: String,
+        type: Array,
         required: [true, "Please add the image of the sneaker"]
 
     },
     size: {
-        type: Number,
+        type: Array,
         required: [true, "Please add sneaker size"]
     },
     instock: {

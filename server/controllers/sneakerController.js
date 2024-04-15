@@ -3,7 +3,7 @@ const Sneaker = require("../Models/sneakerModel")
 
 
 const currentSneakers = asyncHandler(async (req, res) => {
-    const sneakers = await Sneaker.find();
+    const sneakers = await Sneaker.find({ user_id: req.user.id });
     res.status(200).json(sneakers);
 });
 
@@ -37,7 +37,8 @@ const createSneaker = asyncHandler( async (req, res) => {
         image,
         price,
         color,
-        instock
+        instock,
+        user_id: req.user.id
     });
 
     res.status(201).json(sneakers)
