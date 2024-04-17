@@ -58,6 +58,13 @@ const updateSneaker = asyncHandler(async (req, res) => {
         res.status(404);
         throw new Error("Sneaker not found")
     }
+
+    if (sneakers.user_id.toString() !== req.user.id) {
+        res.status(403);
+        throw new Error ("Current user does not have permission to update this sneaker!")
+    }
+
+
     const updatedSneaker = await Sneaker.findByIdAndUpdate(
 
         req.params.id,
@@ -70,7 +77,21 @@ const updateSneaker = asyncHandler(async (req, res) => {
 
 
 const deleteSneaker = asyncHandler(async (req, res) => {
-    res.status(201).json({ message: "Sneaker deleted!" })
+    const sneaker = await Sneaker.findById(req.params.id);
+
+    if (!sneaker) {
+        res.status(404);
+        throw new Error("Sneaker not found")
+    }
+
+    if (sneaker.user_id.toString() !== req.user.id) {
+        res.status(403);
+        throw new Error ("Current user does not have permission to delete this sneaker!")
+    }
+
+
+    await Sneaker.deleteOne({_id: req.params.id})
+    res.status(200).json(sneaker)
 });
 
 
