@@ -18,12 +18,12 @@ const sneakerSchema = mongoose.Schema ({
 
     },
     image: {
-        type: Array,
+        type: String,
         required: [true, "Please add the image of the sneaker"]
 
     },
     size: {
-        type: Array,
+        type: Number,
         required: [true, "Please add sneaker size"]
     },
     instock: {
