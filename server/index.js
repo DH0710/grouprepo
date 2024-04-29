@@ -4,6 +4,7 @@ const errorHandler = require("./middleware/errorHandler");
 const dotenv = require("dotenv").config();
 const multer = require("multer");
 const path = require("path");
+const cors = require("cors");
 
 
 const storage = multer.diskStorage({
@@ -29,6 +30,7 @@ const upload = multer ({storage: storage})
 connectDB();
 const app = express();
 
+app.use(cors)
 
 
 
@@ -61,5 +63,5 @@ app.post("/upload", upload.single("image") , (req, res) => {
 
 
 app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}/`);
+  console.log(`Server is running on port ${port}`);
 });
