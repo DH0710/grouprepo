@@ -30,7 +30,7 @@ const upload = multer ({storage: storage})
 connectDB();
 const app = express();
 
-app.use(cors)
+app.use(cors());
 
 
 

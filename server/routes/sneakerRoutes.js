@@ -5,7 +5,7 @@ const validateToken = require('../middleware/validateTokenHandler');
 
 
 router.use(validateToken);
-router.route("/").get(currentSneakers);
+router.route("/current").get(currentSneakers);
 router.route("/create").post(createSneaker);
 router.route("/:id").put(updateSneaker).delete(deleteSneaker).get(singleSneaker);
 
