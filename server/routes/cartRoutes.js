@@ -1,6 +1,6 @@
-const Cart = require("./Models/cartModel");
+const express = require("express")
 const validateToken = require("../middleware/validateTokenHandler");
-const {updatedCart, deleteCart, getCart, createCart} = require("../controllers/cartController")
+const {updateCart, deleteCart, getCart, createCart, currentCart} = require("../controllers/cartController")
 const router = express.Router();
 
 
@@ -10,7 +10,7 @@ router.use(validateToken);
 router.route("/createCart").post(createCart)
 
 //UPDATE CART
-router.route("/:id/cart").put(updatedCart)
+router.route("/:id/cart").put(updateCart)
 
 //DELETE CART
 router.route("/:id/cart").delete(deleteCart)
@@ -20,13 +20,6 @@ router.route("/find/:userId").get(getCart)
 
 // //GET ALL
 
-router.get("/", validateToken, async (req, res) => {
-  try {
-    const carts = await Cart.find();
-    res.status(200).json(carts);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+router.route("/").get(currentCart)
 
 module.exports = router;

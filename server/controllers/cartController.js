@@ -2,6 +2,20 @@ const asyncHandler = require("express-async-handler");
 const Cart = require("../Models/cartModel")
 
 
+
+// GET ALL 
+
+const currentCart = asyncHandler (async (req, res) => {
+    try {
+        const carts = await Cart.find();
+        res.status(200).json(carts);
+      } catch (err) {
+        res.status(500).json(err);
+      }
+    
+})
+
+
 //CREATE NEW CART
 
 const createCart = asyncHandler(async (req, res) => {
@@ -57,4 +71,4 @@ const deleteCart = asyncHandler(async (req, res) => {
 
 
 
-module.exports = {updateCart, deleteCart, getCart, createCart}
+module.exports = {updateCart, deleteCart, getCart, createCart, currentCart}

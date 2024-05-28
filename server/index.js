@@ -41,6 +41,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use('/api/sneakers', require ("./routes/sneakerRoutes"));
 app.use('/api/users', require ("./routes/userRoutes"));
+app.use("/api/cart", require("./routes/cartRoutes"));
 app.use(errorHandler);
 
 
