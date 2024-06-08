@@ -3,8 +3,12 @@ const Sneaker = require("../Models/sneakerModel")
 
 
 const currentSneakers = asyncHandler(async (req, res) => {
-    const sneakers = await Sneaker.find({ user_id: req.user.id});
+    try {const sneakers = await Sneaker.find({}); // user_id: req.user.id
     res.status(200).json(sneakers);
+} catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Server Error" });
+}
 });
 
 

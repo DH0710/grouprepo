@@ -1,13 +1,13 @@
-const express = require("express")
+const express = require("express");
 const validateToken = require("../middleware/validateTokenHandler");
-const {updateCart, deleteCart, getCart, createCart, currentCart} = require("../controllers/cartController")
+const {updateCart, deleteCart, getCart, createCart, currentCart} = require("../controllers/cartController");
 const router = express.Router();
 
 
 router.use(validateToken);
 
 //CREATE
-router.route("/createCart").post(createCart)
+router.route("/create").post(createCart)
 
 //UPDATE CART
 router.route("/:id/cart").put(updateCart)
