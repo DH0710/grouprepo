@@ -8,7 +8,7 @@ const Navbar = () => {
 
 
       <div className='navbar_logo'>
-        <h2> Swish Kicks </h2>
+        <h1> Swish Kicks </h1>
 
       </div>
 
