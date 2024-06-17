@@ -13,4 +13,4 @@ const SideDrawer = ({ show }) => {
 
 };
 
-export default SideDrawer
+export default SideDrawer;
