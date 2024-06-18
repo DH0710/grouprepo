@@ -5,6 +5,7 @@ const dotenv = require("dotenv").config();
 const multer = require("multer");
 const path = require("path");
 const cors = require("cors");
+const { isTokenBlacklisted } = require('./controllers/userController');
 
 
 const storage = multer.diskStorage({
@@ -43,6 +44,8 @@ app.use('/api/sneakers', require ("./routes/sneakerRoutes"));
 app.use('/api/users', require ("./routes/userRoutes"));
 app.use("/api/cart", require("./routes/cartRoutes"));
 app.use(errorHandler);
+
+app.use(isTokenBlacklisted);
 
 
 

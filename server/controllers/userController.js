@@ -2,6 +2,7 @@ const asyncHandler = require("express-async-handler");
 const User = require("../Models/userModel");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
+const blacklist = new Set(); // This should ideally be a persistent store like Redis
 
 // Register a user
 // route POST /api/users/register
@@ -71,7 +72,7 @@ const loginUser = asyncHandler(async (req, res) => {
          },
 
       }, process.env.ACCESS_TOKEN_SECRET,
-         { expiresIn: "15m" }
+         { expiresIn: "30m" }
       );
 
       res.status(200).json({ accessToken });
@@ -80,6 +81,41 @@ const loginUser = asyncHandler(async (req, res) => {
       throw new Error("email or password is not valid")
    }
 });
+
+// Logout a user
+// route GET /api/users/login
+// @access private
+
+const logoutUser = asyncHandler(async (req, res) => {
+
+   const token = req.headers["authorization"]?.split(" ")[1];
+
+   if (!token) {
+      return res.status(401).send("Access token is missing or invalid");
+   }
+
+   // Invalidate token by adding it to the blacklist
+
+   blacklist.add(token);
+
+   return res.status(200).send("User logged out successfully!")
+});
+
+
+const isTokenBlacklisted = asyncHandler(async (req, res, next) => {
+
+   const token = req.headers["authorization"]?.split(" ")[1];
+
+   if (blacklist.has(token)) {
+      return res.status(401).send("Token is blacklisted")
+   }
+
+   next();
+
+
+});
+
+
 
 
 // Current user
@@ -97,4 +133,4 @@ const currentUser = asyncHandler(async (req, res) => {
 
 
 
-module.exports = { registerUser, loginUser, currentUser }
+module.exports = { registerUser, loginUser, logoutUser, currentUser, isTokenBlacklisted }
