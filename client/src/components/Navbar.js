@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Navbar.css"
 import { Link } from "react-router-dom"
-import nikeIcon from "../assets/nikeIcon.png"
+
 
 const Navbar = ({ click }) => {
   return (

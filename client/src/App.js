@@ -27,7 +27,7 @@ const [sideToggle, setSideToggle] = useState(false);
      <SideDrawer show={sideToggle} click={() => setSideToggle(false)} />
      <Backdrop show={sideToggle} click={() => setSideToggle(false)} />
 
-     <main>
+     <main classname="app">
       <Routes>
         <Route exact path= "/login" component= {LoginScreen} />
         <Route exact path= "/" component= {HomeScreen} />
