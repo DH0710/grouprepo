@@ -1,5 +1,5 @@
 import "./Sneakers.css";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Sneaker = ({brand, name, image, size, instock, price, color, sneakerId}) => {
     return (
@@ -34,7 +34,7 @@ const Sneaker = ({brand, name, image, size, instock, price, color, sneakerId}) =
             </div>
 
         </div>
-    )
-}
+    );
+};
 
 export default Sneaker;

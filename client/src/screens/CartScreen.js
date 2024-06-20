@@ -5,7 +5,7 @@ const CartScreen = () => {
   return (
     <div className='cartscreen'>
 
-        Cart Screen
+        <h2>Cart Screen</h2>
       
     </div>
   )
