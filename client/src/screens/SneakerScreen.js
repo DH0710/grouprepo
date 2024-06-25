@@ -5,7 +5,7 @@ const SneakerScreen = () => {
   return (
     <div className='sneakerscreen'>
 
-        Sneaker Screen
+        <h2>Sneaker Screen</h2>
       
     </div>
   )

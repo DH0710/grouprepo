@@ -1,11 +1,181 @@
 .sneaker {
     width: 300px;
     padding: 1rem;
-    background: #fff;
+    background:#755858;
     box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
     margin: 8px auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     
+    cursor: pointer;
+    color:#ebe8e8
 }
+
+.sneaker:visited {
+    text-decoration: none;
+    
+
+}
+
+/* .sneaker:hover {
+transform: scale(0.98);
+transition: all .2s ease-in-out;
+} */
+
+.sneaker > img {
+    width: 100%;
+    height: 170px;
+    object-fit: contain;
+    border-radius: 10px;
+
+
+}
+
+.sneaker-info > p {
+    margin-bottom: 8px;
+
+}
+
+.sneaker-brand {
+font-weight: bold;
+
+}
+
+.sneaker-name {
+    font-weight: bold;
+    overflow: hidden;
+
+
+}
+
+.sneaker-instock {
+font-weight: bold;
+}
+
+.sneaker-price {
+font-weight: bold;
+}
+
+.sneaker-color {
+font-weight: bold;
+}
+
+.sneaker-size {
+font-weight:bold ;
+}
+
+.sneaker-button {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    color: #171717;
+    background: #f4f4f4;
+    border-radius: 9px;
+    padding: 8px 16px;
+    border: 1px solid #171717 ;
+    font-size: 1rem;
+
+}
+
+.sneaker-button:hover {
+    background:#171717 ;
+    color: #f4f4f4;
+}
+
+
+@media (max-width: 1200px) {
+    .sneaker {
+       width: 360px;
+
+    }
+ }
+
+ @media (max-width: 992px) {
+    .sneaker {
+        width: 330px;
+ 
+     }
+ }
+
+
+ @media (max-width: 768px) {
+    .sneaker {
+        width: 300px;
+ 
+     }
+ }
+
+ @media (max-width: 616px) {
+    .sneaker {
+        width: 290px;
+ 
+     }
+ }
+
+ @media (max-width: 595px) {
+    .sneaker {
+        width: 280px;
+ 
+     }
+ }
+
+ @media (max-width: 576px) {
+    .sneaker {
+        width: 260px;
+ 
+     }
+ }
+
+
+
+
+ @media (max-width: 537px) {
+    .sneaker {
+        width: 230px;
+ 
+     }
+ }
+
+ @media (max-width: 476px) {
+    .sneaker {
+        width: 220px;
+ 
+     }
+ }
+
+
+
+ @media (max-width: 456px) {
+    .sneaker {
+        width: 210px;
+ 
+     }
+ }
+
+
+
+
+
+ @media (max-width: 436px) {
+    .sneaker {
+        width: 200px;
+ 
+     }
+ }
+
+
+ @media (max-width: 416px) {
+    .sneaker {
+        width: 190px;
+ 
+     }
+ }
+
+
+ 
+
+
+
+

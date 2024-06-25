@@ -1,39 +1,47 @@
 import "./Sneakers.css";
 import { Link } from "react-router-dom";
 
-const Sneaker = ({brand, name, image, size, instock, price, color, sneakerId}) => {
+const Sneaker = () => {
     return (
+
+       
+
+        
         <div className='sneaker'>
 
-            <img src={image} alt={name}>
+            <img src="https://m.media-amazon.com/images/I/71PkpSxlQ7L._AC_SX575_.jpg" alt=""></img>
 
-            </img>
+            
 
             <div className='sneaker-info'>
 
-            <p className='sneaker-brand'> {brand}</p>
+            <p className='sneaker-brand'> <h2> Nike </h2> </p>
 
-                <p className='info-name'> {name} </p>
-
-
-                <p className='info-instock'> {instock} </p>
-
-                 <p className='sneaker-price'> {price}</p>
-
-                 <p className='sneaker-color'> {color}</p>
-
-                 <p className='sneaker-size'> {size}</p>
+                <p className='sneaker-name'> Air Jordan Retro 3</p>
 
 
+                <p className='sneaker-instock'> In stock: 2 </p>
 
-                <Link to={`/sneaker/${sneakerId}`} className='info_button'> 
-                View 
-                </Link>
+                 <p className='sneaker-price'> 199.99</p>
+
+                 <p className='sneaker-color'>White/Cement </p>
+
+                 <p className='sneaker-size'>Size: 9.5, 10 </p>
+
+
+
+                 <Link to={`/sneaker/${1111}`} className='sneaker-button'> 
+                 View 
+                 </Link>
                
 
             </div>
 
         </div>
+
+        
+
+        
     );
 };
 

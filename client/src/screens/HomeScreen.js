@@ -11,6 +11,17 @@ const HomeScreen = () => {
       <div className='homescreen_sneakers'>
 
         <Sneaker />
+        <Sneaker />
+        <Sneaker />
+        <Sneaker />
+        <Sneaker />
+        <Sneaker />
+        <Sneaker />
+        <Sneaker />
+        <Sneaker />
+        <Sneaker />
+        <Sneaker />
+
 
 
 

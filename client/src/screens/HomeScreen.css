@@ -17,6 +17,24 @@
     grid-template-columns: repeat(4, 1fr);
 }
 
+ @media (max-width: 1232px) {
+    .homescreen_sneakers {
+        grid-template-columns: repeat(3, 1fr);
+    }
+ }
 
+ @media (max-width: 950px) {
+    .homescreen_sneakers {
+        grid-template-columns: repeat(2, 1fr);
+    }
+ }
+
+ @media (max-width: 630px) {
+    .homescreen_sneakers {
+        grid-template-columns: repeat(1fr);
+    }
+ }
+
+ 
 
 
