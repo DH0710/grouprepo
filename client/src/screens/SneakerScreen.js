@@ -33,11 +33,16 @@ const SneakerScreen = () => {
       <div classname="sneakerscreen-right">
         <div className='right-info'>
           <p>
-            Price: <span> 299.99 </span>
+            Price: <span> $199.99</span>
           </p>
 
           <p>
             Status: <span> In Stock </span>
+          </p>
+
+          <p>
+            Oty
+            <select name="" id=""></select>
           </p>
 
         </div>

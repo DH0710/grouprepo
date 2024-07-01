@@ -85,14 +85,14 @@ font-weight:bold ;
 }
 
 
-@media (max-width: 1232px) {
+@media (max-width: 1200px) {
     .sneaker {
        width: 360px;
 
     }
  }
 
- @media (max-width: 1115px) {
+ @media (max-width: 992px) {
     .sneaker {
         width: 330px;
  
@@ -100,60 +100,74 @@ font-weight:bold ;
  }
 
 
- @media (max-width: 1028px) {
+ @media (max-width: 768px) {
     .sneaker {
         width: 300px;
  
      }
  }
 
- @media (max-width: 950px) {
-    .sneaker {
-        width: 400px;
- 
-     }
- }
-
- @media (max-width: 830px) {
-    .sneaker {
-        width: 330px;
- 
-     }
- }
-
- @media (max-width: 700px) {
+ @media (max-width: 616px) {
     .sneaker {
         width: 290px;
  
      }
  }
 
-
-
-
- @media (max-width: 630px) {
+ @media (max-width: 595px) {
     .sneaker {
-        width: 450px;
+        width: 280px;
  
      }
  }
 
- @media (max-width: 500px) {
+ @media (max-width: 576px) {
     .sneaker {
-        width: 350px;
+        width: 260px;
  
      }
  }
 
 
 
- @media (max-width: 400px) {
+
+ @media (max-width: 537px) {
     .sneaker {
-        width: 300px;
+        width: 230px;
  
      }
  }
 
+ @media (max-width: 476px) {
+    .sneaker {
+        width: 220px;
+ 
+     }
+ }
+
+
+
+ @media (max-width: 456px) {
+    .sneaker {
+        width: 210px;
+ 
+     }
+ }
+
+ @media (max-width: 436px) {
+    .sneaker {
+        width: 200px;
+
+     }
+ }
+
+
+ @media (max-width: 416px) {
+    .sneaker {
+        width: 190px;
+
+     }
+ }
 
 
 
