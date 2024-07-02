@@ -3,7 +3,7 @@ import "./SneakerScreen.css";
 
 const SneakerScreen = () => {
   return (
-    <div className='sneakerscreen'>
+    <div className="sneakerscreen">
 
       <div classname="sneakerscreen-left">
 
@@ -16,7 +16,10 @@ const SneakerScreen = () => {
         <div className='left-info'>
           <p className='left-name'> Air Jordan Retro 3</p>
           <p> Price: 199.99 </p>
-          <p> Colorway: White/Cement Gray  </p>
+          <p> First hitting the scene in 1988, 
+            this sneaker quickly leapt to iconic status, 
+            loved for its groundbreaking design and Michael Jordan's 
+            legendary on-court exploits.  </p>
 
         </div>
 
@@ -41,8 +44,25 @@ const SneakerScreen = () => {
           </p>
 
           <p>
-            Oty
-            <select name="" id=""></select>
+            Qty
+            <select >
+              <option value="1"> 1 </option>
+              <option value="2"> 2 </option>
+              <option value="3"> 3 </option>
+            </select>
+          </p>
+
+          <p>
+            Sz: 
+            <select >
+              <option value="9"> 9 </option>
+              <option value="9.5"> 9.5 </option>
+              <option value="10"> 10 </option>
+            </select>
+          </p>
+
+          <p>
+            <button type="button"> Add To Cart </button>
           </p>
 
         </div>
