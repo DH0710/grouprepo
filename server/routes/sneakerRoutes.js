@@ -1,10 +1,13 @@
 const express = require('express');
 const router = express.Router();
 const {currentSneakers, createSneaker, updateSneaker, deleteSneaker, singleSneaker} = require("../controllers/sneakerController");
+const validateToken = require('../middleware/validateTokenHandler');
 
-router.route("/").get(currentSneakers)
-router.route("/create").post(createSneaker)
-router.route("/:id").put(updateSneaker).delete(deleteSneaker).get(singleSneaker)
+
+router.use(validateToken);
+router.route("/").get(currentSneakers);
+router.route("/create").post(createSneaker);
+router.route("/:id").put(updateSneaker).delete(deleteSneaker).get(singleSneaker);
 
 
 

@@ -1,6 +1,13 @@
 const mongoose = require("mongoose");
 
 const sneakerSchema = mongoose.Schema ({
+
+    user_id: {
+       type: mongoose.Schema.Types.ObjectId,
+      required: true,
+       ref: "User",
+
+    },
     brand: {
         type: String,
         required: [true, "Please add brand of sneaker"]
