@@ -14,7 +14,7 @@ const SneakerScreen = () => {
         </div>
 
         <div className='left-info'>
-          <p className='left-name'> Air Jordan Retro 3</p>
+          <p className='left-name'> Air Jordan Retro 3 "Cement"</p>
           <p> Price: 199.99 </p>
           <p> First hitting the scene in 1988, 
             this sneaker quickly leapt to iconic status, 
