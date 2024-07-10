@@ -8,10 +8,12 @@ const Navbar = ({ click }) => {
     <nav className='navbar'>
 
 
-      <div className='navbar_logo'>
-        <h1> Swish Kicks </h1>
+      <Link to="/" className='navbar_logo'>
+        <h1> Swish Kick </h1>
 
-      </div>
+        </Link>
+
+      
 
 
 
@@ -30,7 +32,7 @@ const Navbar = ({ click }) => {
         </li>
 
         <li>
-          <Link to="/">
+          <Link to="/sneakers">
             Sneaker Store
           </Link>
         </li>

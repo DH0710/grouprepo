@@ -1,7 +1,7 @@
 import "./Sneakers.css";
 import { Link } from "react-router-dom";
 
-const Sneaker = () => {
+const Sneakers = () => {
     return (
 
        
@@ -45,4 +45,4 @@ const Sneaker = () => {
     );
 };
 
-export default Sneaker;
+export default Sneakers;

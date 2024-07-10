@@ -8,6 +8,7 @@ import LoginScreen from "./screens/LoginScreen"
 import HomeScreen from "./screens/HomeScreen"
 import SneakerScreen from "./screens/SneakerScreen"
 import CartScreen from "./screens/CartScreen"
+import StoreScreen from "./screens/StoreScreen"
 
 // Components
 import Navbar from "./components/Navbar";
@@ -30,6 +31,7 @@ function App() {
       <main classname="app">
         <Routes>
           <Route exact path="/" element={ <HomeScreen/> } />
+          <Route exact path="/sneakers" element={ <StoreScreen/> } />
           <Route exact path="/login" element={ <LoginScreen/> } />
           <Route exact path="/sneaker/:id" element={ <SneakerScreen/> } />
           <Route exact path="/cart" element={ <CartScreen/> } />

@@ -1,0 +1,37 @@
+.storescreen {
+    max-width: 1300px;
+    margin: 1rem auto;
+}
+
+.storescreen_title {
+font-size: 1.5rem;
+color: #171717;
+margin-bottom: 1rem;
+margin-left: 8px;
+}
+
+.storescreen_sneakers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+}
+
+
+
+@media (max-width: 1232px) {
+    .storescreen_sneakers {
+        grid-template-columns: repeat(3, 1fr);
+    }
+ }
+
+ @media (max-width: 950px) {
+    .storescreen_sneakers {
+        grid-template-columns: repeat(2, 1fr);
+    }
+ }
+
+ @media (max-width: 630px) {
+    .storescreen_sneakers {
+        grid-template-columns: repeat(1fr);
+    }
+ }
