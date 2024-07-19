@@ -28,41 +28,41 @@ const SneakerScreen = () => {
       </div>
 
 
-      <div className='sneakerscreen_right'> 
+      <div className='sneakerscreen_right'>
 
-      <div className='right_info'>
-        <p>
-          Price: <span> $199.99 </span>
-        </p>
+        <div className='right_info'>
+          <p>
+            Price: <span> $199.99 </span>
+          </p>
 
-        <p>
-          Status:  <span> In Stock </span>
-        </p>
+          <p>
+            Status:  <span> In Stock </span>
+          </p>
 
-        <p>
-          Sz
-          <select>
-          <option value="9"> 9 </option>
-            <option value="9.5"> 9.5 </option>
-            <option value="10"> 10 </option>
-          </select>
-        </p>
+          <p>
+            Size:
+            <select>
+              <option value="9"> 9 </option>
+              <option value="9.5"> 9.5 </option>
+              <option value="10"> 10 </option>
+            </select>
+          </p>
 
-        <p>
-          Qty
-          <select> 
-            <option value="1"> 1 </option>
-            <option value="2"> 2 </option>
-            <option value="3"> 3 </option>
-          </select>
-        </p>
+          <p>
+            Qty:
+            <select>
+              <option value="1"> 1 </option>
+              <option value="2"> 2 </option>
+              <option value="3"> 3 </option>
+            </select>
+          </p>
 
-        <p>
-          <button type="button"> Add To Cart </button>
-        </p>
+          <p>
+            <button class="button"> Add To Cart </button>
+          </p>
 
-      </div>
-      
+        </div>
+
       </div>
 
 

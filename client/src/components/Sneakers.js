@@ -20,13 +20,13 @@ const Sneakers = () => {
                 <p className='sneaker-name'> Air Jordan Retro 3</p>
 
 
-                <p className='sneaker-instock'> In stock: 2 </p>
+                <p className='sneaker-instock'> In Stock: 3 </p>
 
                  <p className='sneaker-price'> 199.99</p>
 
                  <p className='sneaker-color'>White/Cement </p>
 
-                 <p className='sneaker-size'>Size: 9.5, 10 </p>
+                 <p className='sneaker-size'>Limited Sizes Below</p>
 
 
 
