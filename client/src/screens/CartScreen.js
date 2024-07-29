@@ -1,12 +1,24 @@
 import React from 'react'
 import "./CartScreen.css"
+// import componemnts
 
+import Newitem from "../components/Newitem"
 const CartScreen = () => {
   return (
     <div className='cartscreen'>
 
-        <h2>Cart Screen</h2>
-      
+      <div className='cartscreen_left'>
+        <h2> Shopping Cart </h2>
+
+        <Newitem />
+
+
+      </div>
+
+      <div className='cartscreen_right'>
+
+      </div>
+
     </div>
   )
 }
